@@ -1,0 +1,14 @@
+# introduction
+本功能包为拓渝科技有限公司的智能网联传感器教学软件，
+可用于雷达、相机、组合惯导传感器教学；
+# install 
+1. 安装ros
+2. 下载功能包
+git clone git@github.com:ZhawedHoo1998:tuoyu_sensorteching.git
+3. 安装相关依赖
+sudo apt install ros-melodic-jsk-rviz-plugins
+sudo apt install ros-melodic-grid-map
+sudo apt install ros-melodic-velodyne
+4. 编译运行
+catkin_make
+
