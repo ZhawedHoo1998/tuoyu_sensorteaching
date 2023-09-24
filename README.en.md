@@ -4,7 +4,7 @@
 # install 
 1. 安装ros
 2. 下载功能包
-git clone git@github.com:ZhawedHoo1998:tuoyu_sensorteching.git
+git clone git@github.com:ZhawedHoo1998:tuoyu_sensorteaching.git
 3. 安装相关依赖
 sudo apt install ros-melodic-jsk-rviz-plugins
 sudo apt install ros-melodic-grid-map

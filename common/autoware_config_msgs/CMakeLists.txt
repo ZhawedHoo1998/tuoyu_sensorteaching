@@ -12,7 +12,10 @@ add_message_files(
     ConfigClustering.msg
     ConfigRayGroundFilter.msg
     ConfigVoxelGridFilter.msg
-
+    ConfigCanny.msg
+    ConfigHough.msg
+    ConfigROI.msg
+    ConfigCameraDetection.msg
 )
 
 generate_messages(

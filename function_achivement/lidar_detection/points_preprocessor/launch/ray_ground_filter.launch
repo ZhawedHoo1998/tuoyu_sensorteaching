@@ -1,6 +1,6 @@
 <!-- Launch file for Ray Ground Filter -->
 <launch>
-  <arg name="input_point_topic" default="/points_raw" />  <!-- input_point_topic, ground filtering will be performed over the pointcloud in this topic. -->
+  <arg name="input_point_topic" default="/filtered_points" />  <!-- input_point_topic, ground filtering will be performed over the pointcloud in this topic. -->
   <arg name="base_frame" default="base_link" />  <!-- Coordinate system to perform transform (default base_link) -->
   <arg name="clipping_height" default="2.0" />  <!-- Remove Points above this height value (default 2.0 meters) -->
   <arg name="min_point_distance" default="1.85" />  <!-- Removes Points closer than this distance from the sensor origin (default 1.85 meters) -->
@@ -28,4 +28,5 @@
     <param name="no_ground_point_topic" value="$(arg no_ground_point_topic)" />
     <param name="ground_point_topic" value="$(arg ground_point_topic)" />
   </node>
+ <node pkg="tf2_ros" type="static_transform_publisher" name="static_tf_publisher" args="0 0 0 0 0 0 /velodyne /base_link"/>
 </launch>

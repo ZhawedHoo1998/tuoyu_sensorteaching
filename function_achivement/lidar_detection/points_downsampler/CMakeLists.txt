@@ -35,26 +35,14 @@ include_directories(include ${catkin_INCLUDE_DIRS})
 SET(CMAKE_CXX_FLAGS "-O2 -g -Wall ${CMAKE_CXX_FLAGS}")
 
 add_executable(voxel_grid_filter nodes/voxel_grid_filter/voxel_grid_filter.cpp)
-add_executable(ring_filter nodes/ring_filter/ring_filter.cpp)
-add_executable(distance_filter nodes/distance_filter/distance_filter.cpp)
-add_executable(random_filter nodes/random_filter/random_filter.cpp)
 
 add_dependencies(voxel_grid_filter ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
-add_dependencies(ring_filter ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
-add_dependencies(distance_filter ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
-add_dependencies(random_filter ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 
 target_link_libraries(voxel_grid_filter ${catkin_LIBRARIES})
-target_link_libraries(ring_filter ${catkin_LIBRARIES})
-target_link_libraries(distance_filter ${catkin_LIBRARIES})
-target_link_libraries(random_filter ${catkin_LIBRARIES})
 
 install(
   TARGETS
     voxel_grid_filter
-    ring_filter
-    distance_filter
-    random_filter
   ARCHIVE DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
   LIBRARY DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
   RUNTIME DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
