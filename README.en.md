@@ -9,6 +9,8 @@ git clone git@github.com:ZhawedHoo1998:tuoyu_sensorteaching.git
 sudo apt install ros-melodic-jsk-rviz-plugins
 sudo apt install ros-melodic-grid-map
 sudo apt install ros-melodic-velodyne
-4. 编译运行
+sudo apt install ros-melodic-costmap-converter
+4. 安装socket-can
+5. 编译运行
 catkin_make
 
